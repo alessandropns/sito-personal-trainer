@@ -1,0 +1,385 @@
+/* ========== VARIABILI (i colori del sito) ========== */
+:root {
+    --sfondo: #1E1E1E;
+    --sfondo-alt: #2B2B2B;
+    --testo: #F5F5F5;
+    --principale: #FFB400;
+    --accento: #FF7A00;
+}
+
+/* ========== STILE BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--sfondo);
+    color: var(--testo);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+h2 {
+    color: var(--principale);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--principale);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accento);
+}
+
+/* ========== HEADER E MENU (versione base) ========== */
+header {
+    background-color: var(--sfondo-alt);
+    padding: 1rem 2rem;
+    border-bottom: 3px solid var(--principale);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--principale);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--testo);
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--testo);
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--principale);
+    border-bottom-color: var(--principale);
+}
+
+/* ========== SEZIONI ========== */
+main section {
+    padding: 2rem;
+}
+
+main section:nth-child(even) {
+    background-color: var(--sfondo-alt);
+}
+
+article {
+    margin-bottom: 1.5rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: var(--sfondo-alt);
+    text-align: center;
+    padding: 1rem;
+    border-top: 3px solid var(--principale);
+}
+/* ========== PULSANTI ========== */
+.btn {
+    display: inline-block;
+    background-color: var(--principale);
+    color: var(--sfondo);
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--accento);
+    color: var(--sfondo);
+    transform: translateY(-2px);
+}
+/* ========== GRIGLIA E SCHEDE ========== */
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.scheda {
+    background-color: var(--sfondo);
+    border-top: 4px solid var(--principale);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 0;
+    transition: transform 0.2s;
+}
+
+.scheda:hover {
+    transform: translateY(-4px);
+}
+
+.scheda h3 {
+    color: var(--principale);
+}
+
+.scheda ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.scheda li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--sfondo-alt);
+}
+/* ========== FORM ========== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 600px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 0.8rem;
+}
+
+input,
+select,
+textarea {
+    background-color: var(--sfondo);
+    color: var(--testo);
+    border: 2px solid #444;
+    border-radius: 6px;
+    padding: 0.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--principale);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--principale);
+    color: var(--sfondo);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.9rem 1.8rem;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--accento);
+    transform: translateY(-2px);
+}
+main ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.scheda ul {
+    margin-left: 0;
+}
+.conferma {
+    background-color: var(--sfondo);
+    border-left: 4px solid var(--principale);
+    padding: 1rem;
+    border-radius: 6px;
+}
+/* ========== TABELLA ADMIN ========== */
+.tabella-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--sfondo);
+    color: var(--principale);
+    text-align: left;
+    padding: 0.8rem;
+    border-bottom: 3px solid var(--principale);
+    white-space: nowrap;
+}
+
+td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #444;
+    vertical-align: top;
+}
+
+tbody tr:hover {
+    background-color: var(--sfondo);
+}
+
+/* ========== RESPONSIVE (TABLET E TELEFONO) ========== */
+
+/* Tablet: schede su 2 colonne */
+@media (max-width: 900px) {
+    .griglia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telefono: schede su 1 colonna, header in colonna */
+@media (max-width: 600px) {
+    .griglia {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    main section {
+        padding: 1.5rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+/* ========== RESPONSIVE (TABLET E TELEFONO) ========== */
+
+/* Tablet: schede su 2 colonne */
+@media (max-width: 900px) {
+    .griglia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telefono: schede su 1 colonna, header in colonna */
+@media (max-width: 600px) {
+    .griglia {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    main section {
+        padding: 1.5rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== MENU A PULSANTE E ERRORI FORM ========== */
+.menu-toggle {
+    display: none;
+    background: none;
+    color: var(--principale);
+    font-size: 1.8rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    align-self: auto;
+}
+
+.menu-toggle:hover {
+    background: none;
+    transform: none;
+    color: var(--accento);
+}
+
+.errore {
+    background-color: var(--sfondo);
+    border-left: 4px solid #e53935;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.errore p {
+    margin-bottom: 0.3rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.aperto {
+        display: flex;
+    }
+}
