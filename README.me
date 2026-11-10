@@ -1,0 +1,21 @@
+# Andrea Coaching - Sito per personal trainer
+
+Sito vetrina per un personal trainer, realizzato come progetto personale.
+
+## Funzioni
+- Quattro pagine (Home, Chi sono, Servizi, Contatti)
+- Design responsive (computer, tablet, telefono)
+- Form di contatto che salva i messaggi in un database MySQL
+- Area riservata con login per leggere i messaggi
+
+## Tecnologie
+HTML, CSS (Flexbox, Grid), JavaScript, PHP, MySQL
+
+## Sicurezza
+- Prepared statements contro la SQL injection
+- Password salvate con `password_hash()`
+- Output protetto con `htmlspecialchars()`
+
+## Installazione
+1. Crea le tabelle `pt_messaggi` e `pt_admin` nel database.
+2. Copia `connessione.esempio.php` in `connessione.php` e inserisci i tuoi dati.
